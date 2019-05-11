@@ -48,7 +48,7 @@ export default class Todo extends Component {
     //C
     onSubmitHandle = (event) => {
         // event.preventDefault();
-        fetch('http://10.154.0.2:8081/api/v1/todo', {
+        fetch('http://10.154.0.3:8081/api/v1/todo', {
             method:'POST',
             headers: {
                 'Accept': 'application/json',
@@ -77,7 +77,7 @@ export default class Todo extends Component {
                 
                 })
         });
-        fetch("http://10.154.0.2:8081/api/v1/todo/" + id, {method: "DELETE"});
+        fetch("http://10.154.0.3:8081/api/v1/todo/" + id, {method: "DELETE"});
     }
 
     //U
@@ -85,7 +85,7 @@ export default class Todo extends Component {
         let id = e.target.className;
         let number = e.target.id
         console.log(id);
-        fetch('http://10.154.0.2:8081/api/v1/todo/'+ id, {
+        fetch('http://10.154.0.3:8081/api/v1/todo/'+ id, {
             method:'PUT',
             headers: {
                 'Accept': 'application/json',
