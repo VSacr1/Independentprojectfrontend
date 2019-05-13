@@ -29,7 +29,7 @@ export default class SignUp extends Component
     //C
     onSubmitHandle = (event) => {
         event.preventDefault(); 
-        fetch('http://localhost:8081/api/v1/users', {
+        fetch('http://35.197.213.175:8081/api/v1/users', {
             method:'POST',
             headers: {
                 'Accept': 'application/json',
