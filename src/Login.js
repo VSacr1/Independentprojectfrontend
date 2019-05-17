@@ -30,7 +30,7 @@ export default class Login extends Component {
         console.log(username)
         console.log(password); 
 
-        fetch(`http://35.197.213.175:8081/api/v1/users/login?username=${username}&password=${password}`).then(results => 
+        fetch(`/api/v1/users/login?username=${username}&password=${password}`).then(results => 
         { 
             return results.json();
 

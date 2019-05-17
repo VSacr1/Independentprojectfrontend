@@ -34,7 +34,7 @@ export default class Todo extends Component {
 
     //R
     componentDidMount =()=>  {
-        fetch('http://35.197.213.175:8081/api/v1/todo').then(results =>{
+        fetch('/api/v1/todo').then(results =>{
             return results.json();
             
         }).then(data => {
@@ -48,7 +48,7 @@ export default class Todo extends Component {
     //C
     onSubmitHandle = (event) => {
         // event.preventDefault();
-        fetch('http://35.197.213.175:8081/api/v1/todo', {
+        fetch('/api/v1/todo', {
             method:'POST',
             headers: {
                 'Accept': 'application/json',
@@ -77,7 +77,7 @@ export default class Todo extends Component {
                 
                 })
         });
-        fetch("http://35.197.213.175:8081/api/v1/todo/" + id, {method: "DELETE"});
+        fetch("/api/v1/todo/" + id, {method: "DELETE"});
     }
 
     //U
@@ -85,7 +85,7 @@ export default class Todo extends Component {
         let id = e.target.className;
         let number = e.target.id
         console.log(id);
-        fetch('http://35.197.213.175:8081/api/v1/todo/'+ id, {
+        fetch('/api/v1/todo/'+ id, {
             method:'PUT',
             headers: {
                 'Accept': 'application/json',
